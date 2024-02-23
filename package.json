@@ -1,0 +1,18 @@
+{
+  "name": "vite-plugin-dynamic-file-swap",
+  "version": "1.0.0",
+  "description": "Vite plugin for dynamically swapping file content at build time",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "Cheyenne Kellis",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rollup": "^4.12.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "vitest": "^1.3.1"
+  }
+}
