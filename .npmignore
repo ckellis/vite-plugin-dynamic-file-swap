@@ -1,0 +1,10 @@
+coverage
+metrics
+dist
+*.log
+*.tgz
+.gitignore
+rollup.config.js
+vitest.config.js
+src
+test
