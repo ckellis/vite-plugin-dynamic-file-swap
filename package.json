@@ -2,9 +2,17 @@
   "name": "vite-plugin-dynamic-file-swap",
   "version": "1.0.0",
   "description": "Vite plugin for dynamically swapping file content at build time",
-  "main": "index.js",
+  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "lint:check": "prettier --check .",
+    "lint": "prettier --write .",
+    "build": "rollup -c rollup.config.js",
+    "coverage": "vitest --coverage",
+    "prebuild": "rm -rf dist",
+    "preflight": "npm test; npm run lint",
+    "prepack": "npm run build"
   },
   "author": "Cheyenne Kellis",
   "license": "MIT",
@@ -12,6 +20,7 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@vitest/coverage-v8": "^1.3.1",
+    "prettier": "^3.2.5",
     "rollup": "^4.12.0",
     "rollup-plugin-esbuild": "^6.1.1",
     "vitest": "^1.3.1"
