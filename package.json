@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-dynamic-file-swap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vite plugin for dynamically swapping file content at build time",
   "type": "module",
   "main": "dist/index.js",
