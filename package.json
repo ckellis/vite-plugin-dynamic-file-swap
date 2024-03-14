@@ -2,8 +2,13 @@
   "name": "vite-plugin-dynamic-file-swap",
   "version": "1.0.0",
   "description": "Vite plugin for dynamically swapping file content at build time",
+  "main": "dist/index.cjs",
   "type": "module",
-  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
   "scripts": {
     "test": "vitest",
     "lint:check": "prettier --check .",

@@ -2,11 +2,18 @@ import esbuild from "rollup-plugin-esbuild";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 
-const outputConfig = {
-  exports: "named",
-  dir: "dist",
-  format: "esm",
-};
+const outputConfig = [
+  {
+    format: "esm",
+    exports: "named",
+    file: "dist/index.mjs",
+  },
+  {
+    format: "cjs",
+    exports: "named",
+    file: "dist/index.cjs",
+  },
+];
 
 const pluginsConfig = [
   resolve(),
