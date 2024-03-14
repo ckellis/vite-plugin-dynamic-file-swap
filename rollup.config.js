@@ -5,12 +5,12 @@ import commonjs from "@rollup/plugin-commonjs";
 const outputConfig = [
   {
     format: "esm",
-    exports: "named",
+    exports: "auto",
     file: "dist/index.mjs",
   },
   {
     format: "cjs",
-    exports: "named",
+    exports: "auto",
     file: "dist/index.cjs",
   },
 ];
@@ -21,7 +21,7 @@ const pluginsConfig = [
   esbuild({
     include: /\.js$/,
     keepNames: true,
-    minify: true,
+    minify: false,
     target: "esnext",
     sourceMap: true,
   }),
